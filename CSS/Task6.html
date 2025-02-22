@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #f4f4f4;
+        }
+        .outer {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            border: 1px solid gray;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .imgdiv {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 1px solid silver;
+        }
+        .imgdiv img {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .formdiv {
+            padding: 20px 40px;
+        }
+        .text_field {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .text_field input {
+            width: 100%;
+            padding: 8px;
+            height: 35px;
+            border: 1px solid silver;
+            border-radius: 5px;
+            outline: none;
+        }
+        input[type="submit"] {
+            width: 100%;
+            height: 40px;
+            margin: 20px 0;
+            color: white;
+            background-color: green;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #32dc32;
+        }
+        .checkbox {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: silver;
+            padding: 15px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .footer button {
+            background-color: red;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .footer a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="imgdiv">
+            <img src="abc.png" alt="Profile Picture">
+        </div>
+        <form class="formdiv">
+            <div class="text_field">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter Username" required>
+            </div>
+
+            <div class="text_field">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter Password" required>
+            </div>
+
+            <div class="checkbox">
+                <input type="checkbox" id="remember_me" name="remember_me">
+                <label for="remember_me">Remember Me</label>
+            </div>
+
+            <input type="submit" value="Login">
+
+            <div class="footer">
+                <button type="reset"><b>Cancel</b></button>
+                <a href="#">Forgot Password?</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
